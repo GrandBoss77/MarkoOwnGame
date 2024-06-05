@@ -35,6 +35,10 @@ public class WeaponHandler : MonoBehaviour
         {
             CurrentWeapon.Fire();
         }
+        if(Input.GetKeyDown(KeyCode.R) && CurrentWeapon != null && CurrentWeapon.Ammunition > CurrentWeapon.CurrentAmmunition)
+        {
+            StartCoroutine(CurrentWeapon.Reload());
+        }
     }
 
     private void HandleWeaponSwap()

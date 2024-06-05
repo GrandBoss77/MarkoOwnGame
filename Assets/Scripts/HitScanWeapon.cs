@@ -7,7 +7,6 @@ public class HitScanWeapon : Weapon
     public int weaponDamage = 20;
     public ParticleSystem HitParticle = null;
     public ParticleSystem MuzzleFlash = null;
-    //public AudioClip shootSound = null;
 
     protected new void Start()
     {
@@ -15,9 +14,9 @@ public class HitScanWeapon : Weapon
     }
     public override bool Fire()
     {
-
         if (base.Fire() == false)
         {
+            AudioManager.PlaySound(reloadSound, MuzzleFlash.transform.position, 0.5f);
             return false;
         }
         HitScanFire();
@@ -27,7 +26,7 @@ public class HitScanWeapon : Weapon
 
     private void HitScanFire()
     {
-        //SoundManager.PlaySound(shootSound, transform.position);
+        AudioManager.PlaySound(shootSound, MuzzleFlash.transform.position, 0.3f);
         MuzzleFlash.Play();
    
         Ray weaponRay = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
@@ -41,23 +40,19 @@ public class HitScanWeapon : Weapon
             HitParticle.transform.position = hit.point;
             HitParticle.transform.forward = hit.normal;
             HitParticle.transform.Translate(hit.normal.normalized * 0.1f);
-       
-            //HandleEntityHit(hit);
+
+            HandleEntityHit(hit);
         }
     }
 
-    //private void HandleEntityHit(RaycastHit hit)
-    //{
-    //    if (hit.collider)
-    //    {
-    //        Transform parentTransform = hit.collider.transform.parent;
-    //        if (parentTransform != null)
-    //        {
-    //            if (parentTransform.TryGetComponent<Enemy>(out var enemy))
-    //            {
-    //                enemy.TakeDamage(weaponDamage);
-    //            }
-    //        }
-    //    }
-    //}
+    private void HandleEntityHit(RaycastHit hit)
+    {
+        if (hit.collider)
+        {
+            if(hit.transform.TryGetComponent<Enemy>(out var enemy))
+            {
+                enemy.TakeDamage(weaponDamage, Vector3.zero, 0.3f );
+            }
+        }
+    }
 }
