@@ -872,54 +872,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1069270478888967564, guid: 8b7fb1b8276ef6a48afaee231cdcf399, type: 3}
-      propertyPath: attackRange
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1069270478888967564, guid: 8b7fb1b8276ef6a48afaee231cdcf399, type: 3}
-      propertyPath: visionRange
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1069270478888967564, guid: 8b7fb1b8276ef6a48afaee231cdcf399, type: 3}
-      propertyPath: attack.range
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1069270478888967564, guid: 8b7fb1b8276ef6a48afaee231cdcf399, type: 3}
-      propertyPath: objectToDrop
-      value: 
-      objectReference: {fileID: 100008, guid: 7075bd5fe1480184695a32611c15da57, type: 3}
-    - target: {fileID: 1069270478888967564, guid: 8b7fb1b8276ef6a48afaee231cdcf399, type: 3}
-      propertyPath: attack.damage
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1069270478888967564, guid: 8b7fb1b8276ef6a48afaee231cdcf399, type: 3}
-      propertyPath: attack.cooldown
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1069270478888967564, guid: 8b7fb1b8276ef6a48afaee231cdcf399, type: 3}
-      propertyPath: groundCheckLengthY
-      value: 1.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 1069270478888967564, guid: 8b7fb1b8276ef6a48afaee231cdcf399, type: 3}
-      propertyPath: attack.movementSpeed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1069270478888967568, guid: 8b7fb1b8276ef6a48afaee231cdcf399, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1069270478888967571, guid: 8b7fb1b8276ef6a48afaee231cdcf399, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1069270478888967571, guid: 8b7fb1b8276ef6a48afaee231cdcf399, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1069270478888967571, guid: 8b7fb1b8276ef6a48afaee231cdcf399, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.6
-      objectReference: {fileID: 0}
     - target: {fileID: 1069270478888967571, guid: 8b7fb1b8276ef6a48afaee231cdcf399, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.4752922
@@ -963,10 +915,6 @@ PrefabInstance:
     - target: {fileID: 1069270478888967575, guid: 8b7fb1b8276ef6a48afaee231cdcf399, type: 3}
       propertyPath: m_Name
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 5897681467737959442, guid: 8b7fb1b8276ef6a48afaee231cdcf399, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1297,7 +1245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7072114715881557161, guid: 2fdd19a94a01b984f9bdf1fe28fbbccb, type: 3}
       propertyPath: Ammunition
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7072114715881557161, guid: 2fdd19a94a01b984f9bdf1fe28fbbccb, type: 3}
       propertyPath: reloadTime
@@ -1318,6 +1266,22 @@ PrefabInstance:
     - target: {fileID: 7072114715881557161, guid: 2fdd19a94a01b984f9bdf1fe28fbbccb, type: 3}
       propertyPath: muzzleFlashPoint
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072114715881557161, guid: 2fdd19a94a01b984f9bdf1fe28fbbccb, type: 3}
+      propertyPath: audioInfo.shootSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6192bfbbd3b579847a4bfb611b7848cb, type: 3}
+    - target: {fileID: 7072114715881557161, guid: 2fdd19a94a01b984f9bdf1fe28fbbccb, type: 3}
+      propertyPath: audioInfo.reloadSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1699e48eb75dbba449f6aa9b7f96f8ab, type: 3}
+    - target: {fileID: 7072114715881557161, guid: 2fdd19a94a01b984f9bdf1fe28fbbccb, type: 3}
+      propertyPath: audioInfo.shootVolume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072114715881557161, guid: 2fdd19a94a01b984f9bdf1fe28fbbccb, type: 3}
+      propertyPath: audioInfo.reloadVolume
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7206362953244377658, guid: 2fdd19a94a01b984f9bdf1fe28fbbccb, type: 3}
       propertyPath: backHealthBar

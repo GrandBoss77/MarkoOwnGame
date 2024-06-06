@@ -16,7 +16,6 @@ public class HitScanWeapon : Weapon
     {
         if (base.Fire() == false)
         {
-            AudioManager.PlaySound(reloadSound, MuzzleFlash.transform.position, 0.5f);
             return false;
         }
         HitScanFire();
@@ -26,7 +25,7 @@ public class HitScanWeapon : Weapon
 
     private void HitScanFire()
     {
-        AudioManager.PlaySound(shootSound, MuzzleFlash.transform.position, 0.3f);
+        //AudioManager.PlaySound(shootSound, MuzzleFlash.transform.position, 0.3f);
         MuzzleFlash.Play();
    
         Ray weaponRay = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
